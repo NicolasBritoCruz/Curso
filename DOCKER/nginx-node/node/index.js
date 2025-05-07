@@ -1,6 +1,14 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const config = {
+    host: 'db',
+    user: 'root',
+    password: 'root',
+    database: 'nodedb'
+};
+
+const mysql = require('mysql');
 
 app.get('/', (req, res) => {
   res.send('<h1>Hello World!</h1>');
